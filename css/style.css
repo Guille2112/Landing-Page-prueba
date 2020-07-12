@@ -1,0 +1,313 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/*Darle mayor tamaño al h1 que ira en el hero*/
+h1{ font-size: 66px; font-weight: 600; line-height: 80px; }
+h2{ font-size: 48px; margin-bottom: 30px; }
+h5{ margin-bottom: 0px; }
+
+p{ /*Formato que tendrán los parrafos en general*/
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+a:hover{ /*Para que no cambie el formato al pasar el mouse por un "a" tag*/
+    text-decoration: none;
+}
+
+a ion-icon{/*Para cambiar el color a los iconos dentro de las imagenes de la seccion NOSOTROS*/
+    font-size: 22px;
+    color: white;
+}
+
+section{ /*Para que los sections tengan espacio arriba y abajo*/
+    padding: 120px 0;
+}
+
+/*BACKGROUNDS*/
+.bg-light-grey { background-color: #f5f5f5; }
+.bg-dark { background-color: black !important; }/*IMPORTANT es para que se respete nuestro estilo por encima de los predeterminados por bootstrap*/
+
+
+/*Creamos clases topmargin para utilizarlas en general*/
+.topmargin-xs { margin-top: 15px !important; }
+.topmargin-sm { margin-top: 30px !important; }
+.topmargin-lg { margin-top: 60px !important; }
+
+/*Creamos clase para boton*/
+.btn{
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+/*Otra clase para el boton que irá en el hero*/
+.btn-light{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+.btn-dark{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.btn-transparent{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.btn-transparent:hover{
+    color: white;
+}
+.btn ion-icon{ /*Iconos dentro de un botón, maren a la izquierda*/
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.form-control{ /*Para el formulario */
+    font-size: 14px;
+    border: 1px solid #cacaca;
+    padding: 15px;
+    border-radius: 2px;
+    height: auto;
+}
+.form-control:focus{/*Para que al hacer click en un form los bordes sean negros y no azules por defecto*/
+    border: 1px solid black;
+    outline: none;
+    box-shadow: none;
+}
+
+.divider { border-bottom: 2px solid #f5f5f5;} /*Linea divisoria*/
+
+.text-dark{/*Para cambiar el color a negro a cualquer texto*/
+    color: black;
+}
+
+
+.navbar{   /*Para darle tamaño, sombra y color de fondo al navbar */
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    min-height: 100px;
+}
+
+.nav-link{  color: black;   } /*Para darle color negro a la letra del menu de la izquierda*/
+.nav-link:hover{    color: black    } /*Para cuando el usuario pase el mouse sea del mismo solo negro*/
+
+.logo-brand{ /*Para que se vea el logo*/
+    min-width: 60px;
+    max-width: 80px;
+}
+#footer .logo-brand{ /*Para que se vea el logo*/
+    min-width: 140px;
+    max-width: 160px;
+}
+
+.navbar-toggler{ font-size: 40px; } /*Tamaño del icono del menu de la derecha*/
+.navbar-toggler:focus { outline: none; } /*Para que no salga el borde del icono al hacer click*/
+
+#hero{ /*Imagen de fondo sección de hero*/
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color:white;
+}
+
+#hero p{/*Cambiar el formato solo al parrafo dentro del hero*/
+    color: white;
+}
+
+.content-center{ /*Para darle formato al texto del hero*/
+    max-width: 800px;
+    margin: 0 auto 60px auto; /*auto es para que esté centrado*/
+    text-align: center; /*Para que se centre el texto*/
+}
+
+.portafolio-container{ /*Configuramos los bordes de las imagenes*/
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+.portafolio-container img{/*Efecto de transicion en las imagenes*/
+    -moz-transition: all 0.8s ;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.portafolio-container:hover img{/*Para que las imagenes al pasar el mouse se agranden*/
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.portafolio-details{
+    position: absolute; /*Para que este dentro de la imagen*/
+    bottom: 25px; /*Este 25px arriba de la parte de abajo*/
+    left: 25px;
+    z-index: 9000;
+}
+.portafolio-details h2{ /*Para que el h2 y el p dentro de la imagen esten pegados*/
+    margin-bottom: 0px;
+}
+.portafolio-details a h2, .portafolio-details a p { /*Color blanco del texto de las imagens*/
+    color: white;
+}
+
+/*Para que los textos esten dentro de las imagenes en "NOSOTROS"*/
+.member-container{
+    position: relative;
+    margin: 10px 0;
+}
+.member-details{
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    left: 20px;
+}
+
+.member-details span{
+    font-size: 14px;
+}
+.member-details ion-icon{
+    padding: 0 5px;
+}
+
+.precio-container{
+    margin: 15px 0;
+}
+.planes{
+    padding: 50px 80px;
+    border-radius: 2px;
+    min-width: 450px;
+}
+.plan-light{
+    background-color: white;
+    border: 2px solid black;
+}
+.plan-dark{
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+.planes h2{
+    font-size: 70px;
+    font-weight: 600;
+}
+.planes span{
+    font-size: 20px;
+}
+.planes ul{
+    list-style-type: square;
+}
+
+.carousel {
+    min-height: 240px;
+    padding: 40px;
+    border-radius: 2px;
+    text-align: center;
+}
+.carousel p{
+    font-size: 26px;
+    font-weight: 400;
+    color: black;
+}
+/*Para los controles de direccion del carrusel*/
+.carousel-indicators li{
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    margin: 0 8px;
+}
+.carousel-control-next, .carousel-control-prev{
+    color: white;
+    opacity: 1;
+    width: 5%;
+}
+.control-button{
+    background-color: black;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.carousel-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calificacion ion-icon{/*Para las estrellas de los testimonios*/
+    color: #ffb944;
+    font-size: 22px;
+}
+
+.testimonial-user{
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: left;
+}
+.testimonial-user h6{
+    margin-bottom: 0px;
+}
+.testimonial-user span{
+    font-size: 12px;
+}
+.testimonial-user img{
+    border-radius: 50%;
+    max-width: 50px;
+    text-align: center;
+}
+
+/*PARA EL FOOTER*/
+#footer{/*alineacion*/
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+#footer a{/*color blanco del texto*/
+    color: white;
+}
+#footer a:hover{/*al pasar el mouse*/
+    color: white;
+}
+#footer .list-inline .list-inline-item{/*Darle un espacioado*/
+    padding: 10px 15px;
+}
+
+
+
+/*Para que la letra se adapte a dispositivos muy pequeños,
+Responsive Breakpoints en Bootstrap*/
+@media (max-width: 576px) { /*Dispositivos menores a 576px, como iphone (CAMBIAR A MAX-WIDTH)*/
+    h1 { font-size: 40px; line-height: normal; }
+    .portafolio-details h2 { font-size: 32px; }
+    .planes {min-width: unset; padding: 40px;}
+    .carousel-item p { font-size: 20px}
+    .footer-menu {
+        display: block !important;
+        padding: 20px 0 !important;
+        font-size: 20px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+@media (min-width: 768px) and (max-width: 991.98px) {/* Para arreglar planes en iPad*/
+    .portafolio-details h2 { font-size: 30px; }
+    .planes { min-width: unset; padding: 40px 20px; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+@media (min-width: 1200px) {  }
